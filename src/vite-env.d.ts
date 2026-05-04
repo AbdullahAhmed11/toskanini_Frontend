@@ -1,7 +1,10 @@
 /// <reference types="vite/client" />
 
 interface ImportMetaEnv {
-  /** Base URL for the API (no trailing slash). Leave unset in dev to use Vite proxy. */
+  /**
+   * API base URL (no trailing slash). Empty string = relative URL / Vite proxy in dev.
+   * If omitted, defaults to https://toskanini-backend.onrender.com (see config/apiBase.ts).
+   */
   readonly VITE_API_URL?: string;
 }
 

@@ -2,10 +2,9 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { flushSync } from "react-dom";
 import "./App.css";
 import { deleteTableOrder, getTableOrder, putTableOrder } from "./api/tableOrder";
+import { apiBase } from "./config/apiBase";
 import { MENU_ITEMS as fallbackMenuItems } from "./data/menu";
 import type { MenuCategory, MenuItem, OrderItem } from "./types/order";
-
-const apiBase = (import.meta.env.VITE_API_URL ?? "").replace(/\/$/, "");
 
 const TABLES = Array.from({ length: 15 }, (_, index) => index + 1);
 
